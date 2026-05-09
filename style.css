@@ -22,11 +22,8 @@
    font-family: 'Gelasio', serif;
  }
 
- body {
-   background: #000;
- }
-
  .container {
+   position: relative;
    min-width: 1920px;
    height: 5099px;
    background: white;
@@ -231,12 +228,12 @@
 
  .story {
    width: 100%;
-   height: 923px;
+   height: fit-content;
    background: var(--dark-green);
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 0 275px;
+   padding: 50px 275px;
    gap: 61px;
  }
 
@@ -423,12 +420,12 @@
    }
 
    .main-text {
-    top:300px;
+     top: 300px;
      left: 150px;
      background: #fdfcfc3b;
      padding: 50px;
      box-sizing: content-box;
-     border-radius:25px;
+     border-radius: 25px;
    }
 
    .intro-container {
@@ -445,14 +442,15 @@
    }
 
    .intro {
-    height: fit-content;
+     height: fit-content;
    }
 
    .cards {
-     flex-direction: column;
-      height: fit-content;
-      align-items: center;
-      justify-content: flex-start;
+     height: fit-content;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 40px;
    }
 
    .intro-card {
@@ -465,14 +463,213 @@
    }
 
    .story {
-     padding-inline: 150px;
+     padding-inline: 100px;
    }
 
    .story-video-img {
-     max-width: 650px;
+     max-width: 450px;
    }
 
    .tell-us {
-     padding-inline: 150px;
+     padding-inline: 75px;
+   }
+
+   .big-img {
+     border-radius: 20px;
+     height: 573px;
+     width: 455px;
+     object-fit: cover;
+   }
+ }
+
+ @media screen and (max-width: 992px) {
+   .container {
+     min-width: 768px;
+   }
+
+   .header {
+     padding: 20px 150px;
+     flex-direction: column;
+     height: 200px;
+   }
+
+   .main-text {
+     top: 300px;
+     left: 150px;
+     background: #fdfcfc3b;
+     padding: 50px;
+     box-sizing: content-box;
+     border-radius: 25px;
+   }
+
+   .intro-container {
+     width: 100%;
+     margin-left: 0;
+     height: fit-content;
+   }
+
+   .intro-container .text-group {
+     column-gap: 100px;
+     flex-direction: column;
+     height: fit-content;
+     align-items: center;
+   }
+
+   .intro {
+     height: fit-content;
+   }
+
+   .cards {
+     height: fit-content;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 40px;
+   }
+
+   .intro-card {
+     height: 904px;
+   }
+
+   .card-text {
+     height: fit-content;
+     margin-bottom: 10px;
+   }
+
+   .story {
+     padding-inline: 50px;
+     flex-direction: column;
+   }
+
+   .story-video-img {
+     max-width: 450px;
+   }
+
+   .tell-us {
+     padding-inline: 75px;
+   }
+
+   .big-img {
+     border-radius: 20px;
+     height: 573px;
+     width: 455px;
+     object-fit: cover;
+   }
+ }
+
+ @media screen and (max-width: 768px) {
+   .container {
+     min-width: 350px;
+   }
+
+   .header {
+     padding: 20px 150px;
+     flex-direction: column;
+     height: 650px;
+     width: 350px;
+
+   }
+
+   .header .btn {
+     width: 50%;
+   }
+
+   .nav {
+     flex-direction: column;
+   }
+
+   .buttons {
+     width: 350px;
+   }
+
+   .main {
+    background-image: url(./BG2.png);
+   }
+
+   .main-text {
+     position: static;
+     width: 100%;
+     height: 100%;
+     background: #fdfcfc3b;
+     padding: 0px;
+     box-sizing: content-box;
+     border-radius: 25px;
+   }
+
+   .main-text * {
+     width: 100%;
+     padding: 20px;
+   }
+
+   .intro {
+     padding-top: 40px;
+   }
+
+   .intro-container {
+     width: 100%;
+     margin-left: 0;
+     height: fit-content;
+
+   }
+
+   .intro-container .text-group {
+     column-gap: 100px;
+     flex-direction: column;
+     height: 900px;
+     align-items: center;
+
+   }
+
+   .container .intro .intro-container * {
+     width: 100%;
+     height: fit-content;
+     padding: 20px;
+   }
+
+   .intro .text-group .small-text {
+     margin: 0;
+   }
+
+   .title {
+     font-size: 30px;
+
+   }
+
+   .cards {
+     height: fit-content;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 40px;
+   }
+
+   .intro-card {
+     height: 904px;
+   }
+
+   .card-text {
+     height: fit-content;
+     margin-bottom: 10px;
+   }
+
+   .story {
+     padding-inline: 50px;
+     flex-direction: column;
+   }
+
+   .story-video-img {
+     max-width: 450px;
+   }
+
+   .tell-us {
+     padding-inline: 10px;
+     flex-direction: column;
+   }
+
+   .big-img {
+     border-radius: 20px;
+     height: 573px;
+     width: 455px;
+     object-fit: cover;
    }
  }
